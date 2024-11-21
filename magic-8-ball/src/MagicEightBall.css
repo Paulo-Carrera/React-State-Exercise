@@ -1,0 +1,52 @@
+/* General Styling for the Eight Ball */
+.eight-ball {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.eight-ball:hover {
+    transform: scale(1.1);
+}
+
+/* Inner circle for the display area */
+.eight-ball-answer {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(43, 43, 187);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply the shake animation to the eight-ball */
+.shake {
+    animation: shake 1s ease-in-out;
+}
+
